@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import about_img from "./assets/about.jpg";
+import about_img from "./assets/About.jpg";
 import Navbar from "./Navbar";
 import Banner from "./Banner";
 
