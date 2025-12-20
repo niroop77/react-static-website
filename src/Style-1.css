@@ -1,0 +1,144 @@
+/* ==========================
+   GLOBAL
+========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ccccd2;
+  height: 200vh;
+}
+
+.bg-light {
+  background-color: #f0f0f0 !important;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+.btn {
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.btn.btn-primary {
+  color: #fff;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.navbar {
+  transition: 0.4s;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+  height: 75px;
+}
+
+/* NAV LINKS */
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 30px;
+  padding: 25px 0;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* ACTIVE & HOVER */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #0d6efd;
+}
+
+/* ==========================
+   DROPDOWN ICON (FIXED)
+========================== */
+.navbar .dropdown-toggle::after {
+  display: none; /* remove FontAwesome arrow */
+}
+
+/* Optional spacing for Bootstrap icon */
+.navbar .dropdown-toggle i {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon on hover (desktop) */
+@media (min-width: 992px) {
+  .navbar .nav-item:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+  }
+}
+
+/* ==========================
+   STICKY NAVBAR
+========================== */
+.navbar-light.sticky-top {
+  top: -100px;
+  transition: 0.5s;
+}
+
+/* ==========================
+   DROPDOWN MENU
+========================== */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* DESKTOP HOVER DROPDOWN */
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    top: 130%;
+    transition: 0.4s;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
+}
+
+/* ==========================
+   MOBILE STYLES
+========================== */
+@media (max-width: 991.98px) {
+
+  .navbar-light .navbar-nav {
+    border-top: 1px solid #eee;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 12px 0;
+  }
+
+  .dropdown-menu {
+    box-shadow: none;
+  }
+}
+.shadow{
+    box-shadow: none !important;
+}
+.header-image{
+    height: auto !important;
+    width: 100% !important;
+}
+.sc-icons{
+  padding: 3px 5px !important;
+}
