@@ -1,17 +1,35 @@
+import React, { useState } from "react";
 import about_img from "./assets/About.jpg";
+import Banner from "./Banner";
+import Navbar from "./Navbar";
 
 function About() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Message sent successfully!");
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
+
   return (
     <>
-      {/* ===== PAGE HEADER ===== */}
-      <div className="container-fluid page-header py-2 mb-2 bg-light">
-        <div className="container py-1">
-          <h1 className="display-5 text-dark mb-3 text-center">About Us</h1>
-        </div>
-      </div>
+      <Navbar />
 
-      {/* ===== ABOUT SECTION ===== */}
-      <div className="container-xxl py-2 mt-2 mb-2">
+      {/* ===== BANNER ===== */}
+      <Banner title="About Us" />
+
+      {/* ===== ABOUT SECTION (MATCH HOME SPACING) ===== */}
+      <section className="container-xxl py-5">
         <div className="container">
           <div className="row g-5 align-items-center">
 
@@ -60,7 +78,86 @@ function About() {
 
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* ===== CONTACT FORM (SAME AS HOME) ===== */}
+      <section className="container-xxl py-5 bg-light">
+        <div className="container">
+
+          <div className="text-center mb-4">
+            <h6 className="text-primary text-uppercase">Contact</h6>
+            <h2>Get In Touch</h2>
+          </div>
+
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <form onSubmit={handleSubmit} className="card shadow p-4">
+                <div className="row g-3">
+
+                  <div className="col-md-6">
+                    <input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="form-control"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+
+                  <div className="col-md-6">
+                    <input
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      type="email"
+                      className="form-control"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+
+                  <div className="col-12">
+                    <input
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className="form-control"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+
+                  <div className="col-12">
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="form-control"
+                      rows="4"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div className="col-12 text-center">
+                    <button className="btn btn-primary px-5">
+                      Send Message
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ===== FOOTER (MATCH HOME) ===== */}
+      <footer className="bg-dark text-white text-center py-3">
+        <p className="mb-0">© 2025 All Rights Reserved</p>
+      </footer>
     </>
   );
 }
