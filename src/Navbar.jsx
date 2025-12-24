@@ -45,7 +45,7 @@ function Navbar() {
       </div>
 
       {/* ===== NAVBAR ===== */}
-      <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow-sm">
+      <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
 
         {/* LOGO */}
         <Link
