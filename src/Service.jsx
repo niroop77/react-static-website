@@ -93,7 +93,7 @@ function Service() {
 
 
       {/* ===== WHY CHOOSE US (RECOMMENDED) ===== */}
-     <section className="container-xxl py-5">
+     <section className="container-xxl py-5 bg-light">
   <div className="container">
 
     {/* Section Heading */}
@@ -150,10 +150,10 @@ function Service() {
 </section>
 
       {/* ===== CALL TO ACTION ===== */}
-      <section className="container-xxl py-5 bg-primary text-white">
+       <section className="container-fluid py-5 bg-primary text-white">
         <div className="container text-center">
-          <h2 className="mb-3">Have a Project in Mind?</h2>
-          <p className="mb-4">
+          <h2 className="mb-3 text-white">Have a Project in Mind?</h2>
+          <p className="mb-4 text-white">
             Let’s discuss how we can help your business grow.
           </p>
           <a href="/contact" className="btn btn-light px-5 py-2">

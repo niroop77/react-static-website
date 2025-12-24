@@ -1,153 +1,10 @@
-/* ==========================
-   GLOBAL
-========================== */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #ccccd2;
-  height: 200vh;
-}
-
-.bg-light {
-  background-color: #f0f0f0 !important;
-}
-
-/* ==========================
-   BUTTONS
-========================== */
-.btn {
-  font-weight: 500;
-  transition: all 0.4s ease;
-}
-
-.btn.btn-primary {
-  color: #fff;
-}
-
-.btn-sm-square {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ==========================
-   NAVBAR
-========================== */
-.navbar {
-  transition: 0.4s;
-}
-
-.navbar-light .navbar-brand,
-.navbar-light a.btn {
-  height: 75px;
-}
-
-/* NAV LINKS */
-.navbar-light .navbar-nav .nav-link {
-  margin-right: 30px;
-  padding: 25px 0;
-  color: #000;
-  font-size: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-  position: relative;
-}
-
-/* ACTIVE & HOVER */
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-  color: #0d6efd;
-}
-
-/* ==========================
-   DROPDOWN ICON (FIXED)
-========================== */
-.navbar .dropdown-toggle::after {
-  display: none; /* remove FontAwesome arrow */
-}
-
-/* Optional spacing for Bootstrap icon */
-.navbar .dropdown-toggle i {
-  font-size: 0.75rem;
-  transition: transform 0.3s ease;
-}
-
-/* Rotate icon on hover (desktop) */
-@media (min-width: 992px) {
-  .navbar .nav-item:hover .dropdown-toggle i {
-    transform: rotate(180deg);
-  }
-}
-
-/* ==========================
-   STICKY NAVBAR
-========================== */
-.navbar-light.sticky-top {
-  top: -100px;
-  transition: 0.5s;
-}
-
-/* ==========================
-   DROPDOWN MENU
-========================== */
-.dropdown-menu {
-  border: none;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* DESKTOP HOVER DROPDOWN */
-@media (min-width: 992px) {
-  .navbar .nav-item .dropdown-menu {
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    top: 130%;
-    transition: 0.4s;
-  }
-
-  .navbar .nav-item:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    top: 100%;
-  }
-}
-
-/* ==========================
-   MOBILE STYLES
-========================== */
-@media (max-width: 991.98px) {
-
-  .navbar-light .navbar-nav {
-    border-top: 1px solid #eee;
-  }
-
-  .navbar-light .navbar-nav .nav-link {
-    margin-right: 0;
-    padding: 12px 0;
-  }
-
-  .dropdown-menu {
-    box-shadow: none;
-  }
-}
-.shadow{
-    box-shadow: none !important;
-}
-.header-image{
-    height: auto !important;
-    width: 100% !important;
-}
-.sc-icons{
-  padding: 3px 5px !important;
-}
 /* =========================
-   GLOBAL STYLES
+   GLOBAL
 ========================= */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #212529;
   scroll-behavior: smooth;
 }
 
@@ -160,10 +17,45 @@ section {
 }
 
 /* =========================
+   BUTTONS
+========================= */
+.btn {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #0d6efd, #0a58ca);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 26px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0a58ca, #084298);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+}
+
+.btn-light {
+  border-radius: 30px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
    TOP BAR
 ========================= */
 .container-fluid.bg-light {
   font-size: 14px;
+  background-color: #f0f0f0 !important;
 }
 
 .container-fluid.bg-light i {
@@ -174,22 +66,34 @@ section {
    NAVBAR
 ========================= */
 .navbar {
+  background-color: #ffffff !important;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+  height: 75px;
 }
 
 .navbar-brand {
   font-size: 24px;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
-.navbar-nav .nav-link {
-  font-weight: 500;
-  margin: 0 10px;
-  color: #333;
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 30px;
+  padding: 25px 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222;
+  position: relative;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
   color: #0d6efd;
 }
 
@@ -198,86 +102,162 @@ section {
 }
 
 /* =========================
-   HERO IMAGE
+   DROPDOWN
 ========================= */
-#home img {
-  height: 500px;
-  object-fit: cover;
+.navbar .dropdown-toggle::after {
+  display: none;
 }
 
-@media (max-width: 768px) {
-  #home img {
-    height: 300px;
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    top: 130%;
+    transition: 0.3s ease;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
   }
 }
 
 /* =========================
-   ABOUT SECTION
+   SOCIAL ICONS
 ========================= */
-#about h6 {
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-
-#about ul li {
-  font-size: 16px;
-}
-
-#about img {
-  transition: transform 0.3s ease;
-}
-
-#about img:hover {
-  transform: scale(1.03);
+.sc-icons {
+  padding: 3px 5px;
 }
 
 /* =========================
-   SERVICES
+   BANNER / HERO
 ========================= */
-#services {
-  background-color: #f8f9fa;
+.banner-section {
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
-#services .shadow {
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.45)
+  );
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding-left: 60px;
+}
+
+.banner-title {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: transparent;
+  font-size: 14px;
+}
+
+.breadcrumb-item,
+.breadcrumb-item a {
+  color: #fff;
+}
+
+.breadcrumb-item.active {
+  color: #ddd;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+}
+
+/* =========================
+   SECTION COLOR SYSTEM
+========================= */
+section.container-xxl {
+  background-color: #ffffff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+section.container-xxl:nth-of-type(even) {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+section.bg-primary {
+  background-color: #0d6efd !important;
+  color: #fff;
+}
+
+section.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* =========================
+   CARDS / SERVICES / INFO
+========================= */
+.bg-white.border.rounded,
+.bg-white.shadow,
+.bg-white.shadow-sm {
+  border: none !important;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  border-radius: 12px;
 }
 
-#services .shadow:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-#services i {
-  transition: transform 0.3s ease;
-}
-
-#services .shadow:hover i {
-  transform: scale(1.2);
+.bg-white.border.rounded:hover,
+.bg-white.shadow:hover,
+.bg-white.shadow-sm:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* =========================
-   CONTACT
+   TYPOGRAPHY
 ========================= */
-#contact .card {
-  border-radius: 15px;
+h2 {
+  font-weight: 700;
+  color: #111;
 }
 
-#contact input,
-#contact textarea {
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+.form-control {
   border-radius: 8px;
   padding: 12px;
 }
 
-#contact input:focus,
-#contact textarea:focus {
+.form-control:focus {
   border-color: #0d6efd;
   box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
-}
-
-#contact button {
-  border-radius: 30px;
-  font-weight: 500;
 }
 
 /* =========================
@@ -288,15 +268,34 @@ footer {
 }
 
 /* =========================
-   ICON STYLES
+   ICONS
 ========================= */
 .bi {
   vertical-align: middle;
 }
 
 /* =========================
-   MOBILE OPTIMIZATION
+   RESPONSIVE
 ========================= */
+@media (max-width: 768px) {
+  .banner-section {
+    height: 300px;
+  }
+
+  .banner-content {
+    padding-left: 20px;
+  }
+
+  .banner-title {
+    font-size: 30px;
+  }
+
+  section.container-xxl {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
 @media (max-width: 576px) {
   h2 {
     font-size: 22px;
@@ -309,92 +308,4 @@ footer {
   .navbar-brand {
     font-size: 20px;
   }
-
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-/* ===== BANNER ===== */
-.banner-section {
-  position: relative;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-}
-
-/* Overlay */
-.banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-/* Content */
-.banner-content {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  padding-left: 60px;
-}
-
-/* Title */
-.banner-title {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-  background: transparent;
-  padding: 0;
-  margin: 0;
-}
-
-.breadcrumb-item,
-.breadcrumb-item a {
-  color: #fff;
-  font-size: 14px;
-}
-
-.breadcrumb-item.active {
-  color: #ddd;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  color: #fff;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .banner-section {
-    height: 300px;
-  }
-
-  .banner-content {
-    padding-left: 20px;
-  }
-
-  .banner-title {
-    font-size: 28px;
-  }
-}
-.banner-section {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.breadcrumb {
-  background: transparent;
-  font-size: 14px;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  color: #fff;
 }
