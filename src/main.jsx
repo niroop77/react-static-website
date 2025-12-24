@@ -13,6 +13,7 @@ import Home from './Home.jsx'
 import About from './About.jsx'
 import Service from './Service.jsx'
 import Contact from './Contact.jsx'
+import Effect from './Hooks/Effect.jsx'
 
 // Router config
 const router = createBrowserRouter([
@@ -32,10 +33,10 @@ const router = createBrowserRouter([
     path: '/contact',
     element: <Contact />,
   },
-  // {
-  //   path: '/effect-hooks',
-  //   element: <Effect.jsx />
-  // },
+  {
+    path: '/effect-hooks',
+    element: <Effect />
+  },
 ])
 
 // Render app
