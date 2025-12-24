@@ -312,3 +312,6 @@ footer {
 .sc-icons{
   padding: 0px !important;
 }
+.breadcrumb-item+.breadcrumb-item::before{
+  color: #ffffff !important;
+}
