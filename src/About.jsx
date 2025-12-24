@@ -56,19 +56,33 @@ function About() {
               </p>
 
               <div className="row g-4 mb-4">
-                {[
-                  "Quality Services",
-                  "Expert Team",
-                  "Affordable Pricing",
-                  "24/7 Support",
-                ].map((item, index) => (
-                  <div key={index} className="col-sm-6">
-                    <div className="d-flex align-items-center">
-                      <i className="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
-                      <h6 className="mb-0">{item}</h6>
-                    </div>
+                <div className="col-12 col-sm-6">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-primary fs-5 me-3"></i>
+                    <span className="fw-semibold">Quality Services</span>
                   </div>
-                ))}
+                </div>
+
+                <div className="col-12 col-sm-6">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-primary fs-5 me-3"></i>
+                    <span className="fw-semibold">Expert Team</span>
+                  </div>
+                </div>
+
+                <div className="col-12 col-sm-6">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-primary fs-5 me-3"></i>
+                    <span className="fw-semibold">Affordable Pricing</span>
+                  </div>
+                </div>
+
+                <div className="col-12 col-sm-6">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-primary fs-5 me-3"></i>
+                    <span className="fw-semibold">24/7 Support</span>
+                  </div>
+                </div>
               </div>
 
               <a href="#" className="btn btn-primary px-4 py-2">

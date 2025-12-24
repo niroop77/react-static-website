@@ -32,6 +32,10 @@ const router = createBrowserRouter([
     path: '/contact',
     element: <Contact />,
   },
+  // {
+  //   path: '/effect-hooks',
+  //   element: <Effect.jsx />
+  // },
 ])
 
 // Render app

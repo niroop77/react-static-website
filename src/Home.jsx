@@ -50,19 +50,35 @@ function Home() {
                 performance, security, and customer satisfaction.
               </p>
 
-              <ul className="list-unstyled">
-                {[
-                  "Quality Services",
-                  "Expert Team",
-                  "Affordable Pricing",
-                  "24/7 Support",
-                ].map((item, index) => (
-                  <li key={index} className="mb-2">
-                    <i className="bi bi-check-circle-fill text-primary me-2"></i>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+             <div className="row g-4 mb-4">
+                <div className="col-12 col-sm-6">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-primary fs-5 me-3"></i>
+                    <span className="fw-semibold">Quality Services</span>
+                  </div>
+                </div>
+
+                <div className="col-12 col-sm-6">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-primary fs-5 me-3"></i>
+                    <span className="fw-semibold">Expert Team</span>
+                  </div>
+                </div>
+
+                <div className="col-12 col-sm-6">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-primary fs-5 me-3"></i>
+                    <span className="fw-semibold">Affordable Pricing</span>
+                  </div>
+                </div>
+
+                <div className="col-12 col-sm-6">
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-primary fs-5 me-3"></i>
+                    <span className="fw-semibold">24/7 Support</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
