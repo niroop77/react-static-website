@@ -10,7 +10,7 @@ function Navbar() {
           <div className="col-lg-7 px-5 text-start">
             <div className="h-100 d-inline-flex align-items-center py-3 me-4">
               <i className="bi bi-geo-alt text-primary me-2"></i>
-              <small>XYZ Road, Delhi, India</small>
+              <small>XYZ Road, Hyderabad, India</small>
             </div>
 
             <div className="h-100 d-inline-flex align-items-center py-3">

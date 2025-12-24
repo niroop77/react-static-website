@@ -140,7 +140,7 @@ function Contact() {
                 <i className="bi bi-geo-alt-fill text-primary fs-2 mb-3"></i>
                 <h6>Our Address</h6>
                 <p className="text-muted mb-0">
-                  XYZ Road, Delhi, India
+                  XYZ Road, Hyderabad, India
                 </p>
               </div>
             </div>
