@@ -172,7 +172,7 @@ function Contact() {
       <section className="container-fluid px-0">
         <iframe
           title="Google Map"
-          src="https://www.google.com/maps?q=Delhi%20India&output=embed"
+          src="https://www.google.com/maps?q=Hyderabad%20India&output=embed"
           width="100%"
           height="400"
           style={{ border: 0 }}
