@@ -14,6 +14,10 @@ import About from './About.jsx'
 import Service from './Service.jsx'
 import Contact from './Contact.jsx'
 import Effect from './Hooks/Effect.jsx'
+import NavigateHooks from './Hooks/NavigateHooks.jsx'
+import NavigatePractice from './Hooks/NavigatePractice.jsx'
+import Users from './api/Users.jsx'
+import Products from './api/Products.jsx'
 
 // Router config
 const router = createBrowserRouter([
@@ -36,6 +40,22 @@ const router = createBrowserRouter([
   {
     path: '/effect-hooks',
     element: <Effect />
+  },
+  {
+    path: '/menu',
+    element: <NavigateHooks />
+  },
+  {
+    path: '/redirect',
+    element: <NavigatePractice />
+  },
+  {
+    path: '/users',
+    element: <Users />
+  },
+  {
+    path: '/products',
+    element: <Products />
   },
 ])
 

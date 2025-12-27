@@ -315,3 +315,10 @@ footer {
 .breadcrumb-item+.breadcrumb-item::before{
   color: #ffffff !important;
 }
+.img-respon{
+  display: block;
+  margin: auto;
+ height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  padding: 10px !important;
+}
